@@ -10,10 +10,19 @@ public class CharacterScriptable : ScriptableObject
 {
     public static CharacterScriptable instance;
     public string characterName;
+    public string characterDesc;
 
     public float characterSpeed;
 
     public GameObject animalObject;
+
+    public void UpdateStats(CharacterSelect gm)
+    {
+        gm.nameUI.text = characterName;
+        gm.speedUI.text = "speed: " + characterSpeed;
+        gm.descUI.text = characterDesc;
+    }
+    
     
     // Start is called before the first frame update
     void Start()

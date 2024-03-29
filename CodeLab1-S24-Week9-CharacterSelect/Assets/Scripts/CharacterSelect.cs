@@ -1,11 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CharacterSelect : MonoBehaviour
 {
+    public TextMeshProUGUI nameUI;
+
+    public TextMeshProUGUI speedUI;
+
+    public TextMeshProUGUI descUI;
+
+    public CharacterScriptable stats;
+
     public static CharacterSelect instance;
     //creates an array of scriptable objects
     public CharacterScriptable[] animalArray;
@@ -16,6 +25,7 @@ public class CharacterSelect : MonoBehaviour
     private List<GameObject> animalList;
     //keeps track of the animal we are on
     private int currentAnimal;
+    
 
     public GameObject chosenAnimal;
     
@@ -34,6 +44,7 @@ public class CharacterSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stats.UpdateStats(this);
         //creates a new list at the start
         animalList = new List<GameObject>();
         //runs through the animal array of scriptable objects to:
@@ -58,6 +69,10 @@ public class CharacterSelect : MonoBehaviour
     {
         animalList[currentAnimal].SetActive(true);
         chosenAnimal = animalList[currentAnimal];
+        stats = animalArray[currentAnimal];
+        stats.UpdateStats(this);
+      
+
     }
 
     public void Next()
@@ -77,6 +92,7 @@ public class CharacterSelect : MonoBehaviour
         }
         
         ShowAnimal();
+        
     }
 
     //same thing but instead check to see if you are at the front of the list

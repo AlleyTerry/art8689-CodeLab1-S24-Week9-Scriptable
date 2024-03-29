@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Chicken
   m_EditorClassIdentifier: 
   characterName: Chicken
+  characterDesc: good ol good ol
   characterSpeed: 5
   animalObject: {fileID: 4038136617831719693, guid: 1a47d0c32e2bf5846bd5fa4b6d0ea22e, type: 3}

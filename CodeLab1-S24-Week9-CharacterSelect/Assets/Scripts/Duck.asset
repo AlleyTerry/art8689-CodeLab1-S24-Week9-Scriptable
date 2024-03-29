@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Duck
   m_EditorClassIdentifier: 
   characterName: Duck
+  characterDesc: He'd up to something and you'll never catch him!
   characterSpeed: 3
   animalObject: {fileID: 1662182186061402621, guid: 63b1f27447d282d40ac0c2a1cc71bb99, type: 3}
