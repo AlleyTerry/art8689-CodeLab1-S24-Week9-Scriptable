@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DuckWhite
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a90c17c4551ca549b5f06862f70c230, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

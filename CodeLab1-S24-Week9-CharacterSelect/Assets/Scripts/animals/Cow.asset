@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5533afc26a3687f458b4b23801a5968a, type: 3}
+  m_Name: Cow
+  m_EditorClassIdentifier: 
+  characterName: Cow
+  characterDesc: Big Girl!
+  characterSpeed: 0.5
+  animalObject: {fileID: 3508265166297404388, guid: d63e8744d52d0da418810f07e9d9a326, type: 3}

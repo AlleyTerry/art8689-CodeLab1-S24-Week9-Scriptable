@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: aa87107d0c3535c4983a4edb2d0e9f7b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.0678477, g: 0.27414504, b: 0.4847731, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,6 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f886fcf9cae6a54cb57df797f7b51ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameUI: {fileID: 0}
+  speedUI: {fileID: 0}
+  descUI: {fileID: 0}
+  stats: {fileID: 0}
   animalArray:
   - {fileID: 11400000, guid: 7c7e6ebee03130444b4da1aed46e0405, type: 2}
   - {fileID: 11400000, guid: 7e05f5f3c940202408c42e4edfe16ccc, type: 2}

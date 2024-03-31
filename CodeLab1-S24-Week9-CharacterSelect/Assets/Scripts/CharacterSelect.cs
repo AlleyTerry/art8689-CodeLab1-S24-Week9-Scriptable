@@ -116,6 +116,7 @@ public class CharacterSelect : MonoBehaviour
     {
         SceneManager.LoadScene("MainGame");
         Instantiate(chosenAnimal);
+        //Camera.main.transform.SetParent(chosenAnimal.transform);
     }
     
     
