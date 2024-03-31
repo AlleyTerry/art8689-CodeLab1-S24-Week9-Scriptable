@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,6 +8,11 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelect : MonoBehaviour
 {
+    public Transform targetPlayer;
+
+    public Transform camTarget;
+    public Transform camTrans;
+    
     public TextMeshProUGUI nameUI;
 
     public TextMeshProUGUI speedUI;
@@ -44,6 +50,7 @@ public class CharacterSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        camTrans = Camera.main.GetComponent<Transform>();
         stats.UpdateStats(this);
         //creates a new list at the start
         animalList = new List<GameObject>();
@@ -117,8 +124,10 @@ public class CharacterSelect : MonoBehaviour
         SceneManager.LoadScene("MainGame");
         Instantiate(chosenAnimal);
         //Camera.main.transform.SetParent(chosenAnimal.transform);
+        camTarget = chosenAnimal.GetComponent<Transform>();
+        camTrans.position = camTarget.position + new Vector3(1,2,-3);
+        //how to then make this constantly update?? idk
     }
-    
-    
 
+ 
 }

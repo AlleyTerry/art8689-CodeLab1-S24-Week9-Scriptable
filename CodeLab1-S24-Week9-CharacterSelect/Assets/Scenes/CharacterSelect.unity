@@ -168,6 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f886fcf9cae6a54cb57df797f7b51ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPlayer: {fileID: 0}
+  camTarget: {fileID: 0}
+  camTrans: {fileID: 0}
   nameUI: {fileID: 908846087}
   speedUI: {fileID: 699531521}
   descUI: {fileID: 2051383520}
@@ -626,7 +629,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0.21082234, y: 0.07235628, z: -0.01564989, w: -0.97471726}
-  m_LocalPosition: {x: 1.3865328, y: 2.35, z: -2.54}
+  m_LocalPosition: {x: 0.98, y: 8.35, z: 0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

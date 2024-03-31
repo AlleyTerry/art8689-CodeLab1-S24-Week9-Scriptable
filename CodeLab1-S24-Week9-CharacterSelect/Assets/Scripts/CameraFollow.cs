@@ -9,13 +9,14 @@ public class CameraFollow : MonoBehaviour
 
     private Vector3 offset;
 
-    
+    public Transform camTrans;
 
  
 
     void Start()
     {
-        targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        camTrans = Camera.main.GetComponent<Transform>();
+        //targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         //offset = targetPlayer.position - transform.position;
     }
 
