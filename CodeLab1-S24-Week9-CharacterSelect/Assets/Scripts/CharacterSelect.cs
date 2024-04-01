@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,8 +34,8 @@ public class CharacterSelect : MonoBehaviour
     private int currentAnimal;
     
 
-    public GameObject chosenAnimal;
-    
+    GameObject chosenAnimal = null;
+
     private void Awake()
     {
         if (instance == null)
@@ -47,10 +48,11 @@ public class CharacterSelect : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        camTrans = Camera.main.GetComponent<Transform>();
+        //camTrans = Camera.main.GetComponent<Transform>();
         stats.UpdateStats(this);
         //creates a new list at the start
         animalList = new List<GameObject>();
@@ -78,6 +80,8 @@ public class CharacterSelect : MonoBehaviour
         chosenAnimal = animalList[currentAnimal];
         stats = animalArray[currentAnimal];
         stats.UpdateStats(this);
+        Debug.Log(animalArray[currentAnimal]);
+        Debug.Log(chosenAnimal);
       
 
     }
@@ -121,13 +125,34 @@ public class CharacterSelect : MonoBehaviour
 
     public void PlayGame()
     {
+        
         SceneManager.LoadScene("MainGame");
-        Instantiate(chosenAnimal);
+        chosenAnimal.gameObject.SetActive(false);
+        PlayDebug();
+        //animalArray[currentAnimal].GameObject().SetActive(false);
+      
         //Camera.main.transform.SetParent(chosenAnimal.transform);
-        camTarget = chosenAnimal.GetComponent<Transform>();
-        camTrans.position = camTarget.position + new Vector3(1,2,-3);
+
+        //camTarget = chosenAnimal.GetComponent<Transform>();
+        //camTrans.position = camTarget.position + new Vector3(1,2,-3);
         //how to then make this constantly update?? idk
     }
 
- 
+    public void PlayDebug()
+    {
+        Debug.Log(chosenAnimal.name);
+        string newPath = "Prefabs/" + animalArray[currentAnimal].name;
+        Debug.Log(newPath);
+        GameObject finalAnimal = Instantiate(Resources.Load<GameObject>(newPath), new Vector3(0,0,0), Quaternion.identity);
+        finalAnimal.transform.position = new Vector3(0, 0, 0);
+        Camera.main.transform.SetParent(finalAnimal.transform);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            PlayDebug();
+        }
+    }
 }
