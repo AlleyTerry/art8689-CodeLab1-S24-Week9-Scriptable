@@ -15,4 +15,4 @@ MonoBehaviour:
   characterName: Duck
   characterDesc: He'd up to something and you'll never catch him!
   characterSpeed: 3
-  animalObject: {fileID: 1662182186061402621, guid: 63b1f27447d282d40ac0c2a1cc71bb99, type: 3}
+  animalObject: {fileID: 6071265293402234369, guid: 8d71601534f9ace40a35c95f65d997ce, type: 3}

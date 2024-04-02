@@ -15,4 +15,4 @@ MonoBehaviour:
   characterName: Chicken
   characterDesc: good ol good ol
   characterSpeed: 5
-  animalObject: {fileID: 4038136617831719693, guid: 1a47d0c32e2bf5846bd5fa4b6d0ea22e, type: 3}
+  animalObject: {fileID: 8130878007913417242, guid: a76a052c755f3c34e95cf1f810d44534, type: 3}

@@ -15,4 +15,4 @@ MonoBehaviour:
   characterName: Cow
   characterDesc: Big Girl!
   characterSpeed: 0.5
-  animalObject: {fileID: 3508265166297404388, guid: d63e8744d52d0da418810f07e9d9a326, type: 3}
+  animalObject: {fileID: 1597592446432161878, guid: 100eb41553bf21340a5d8c19093bdf3e, type: 3}
